@@ -21,3 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // ADMIN
 Route::get('/usuarios', 'UserController@index')->name('users-list');
+Route::get('/servicios', 'ServiceController@index')->name('services-list');
+Route::get('/categorias', 'CategoryController@index')->name('categories-list');

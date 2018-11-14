@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Service;
 
-class UserController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(5);
-        return view('admin.users')->with('users', $users);
+        $services = Service::paginate(5);
+        return view('admin.services')->with('services', $services);
     }
 
     /**

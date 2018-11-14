@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Category;
 
-class UserController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(5);
-        return view('admin.users')->with('users', $users);
+        $categories = Category::paginate(5);
+        return view('admin.categories')->with('categories', $categories);
+
     }
 
     /**
