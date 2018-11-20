@@ -2,29 +2,25 @@
 
 @section('content')
     <div class="container">
-        <div class="album py-5 bg-light">
-            <div class="container">
-                <div class="row">
-                    <?php foreach($services as $service): ?>
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" src="{{$service->imagedescription}}" alt="Card image cap">
-                                <div class="card-body">
-                                <h5 class="mb-1">{{ $service->name}}</h5>
-                                <p class="card-text">{{$service->description}}</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                         <a href="servicio/{{ $service->id }}/edit" class="btn btn-sm btn-outline-secondary">Editar</a>
-                                        </div>
-                                        <small class="text-muted">Precio: ${{$service->price}}</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach ?>
+        <div class="row mb-2">
+            <?php foreach($services as $service): ?>
+                <div class="col-md-6">
+                    <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        {{-- <strong class="d-inline-block mb-2 text-primary">World</strong> --}}
+                        <h3 class="mb-0">
+                        <h4 class="text-dark">{{ $service->name}}</h4>
+                        </h3>
+                        <div class="mb-1 text-muted">Precio: ${{$service->price}}</div>
+                        <p class="card-text mb-auto">{{$service->description}}</p>
+                        <a href="servicio/{{ $service->id }}/edit">Editar</a>
+                    </div>
+                    <img class="card-img-right flex-auto d-none d-lg-block" src="{{$service->imagedescription}}" alt="Card image cap">
+                    </div>
                 </div>
-            </div>
+            <?php endforeach ?>
         </div>
-    </div>
+      </div>
+  
+
 @endsection
