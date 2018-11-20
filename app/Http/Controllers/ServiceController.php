@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Service;
 use App\User;
+use App\Category;
 use Illuminate\Support\Facades\Auth;
 class ServiceController extends Controller
 {
@@ -60,7 +61,9 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categories = Category::all();
+        $service = Service::find($id);
+        return view('services.editservice')->with('service', $service);
     }
 
     /**
@@ -72,7 +75,14 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $service = Service::find($id);
+
+        $service->name = $request->input('name');
+        $service->price = $request->input('price');
+        $service->description = $request->input('description');  
+        
+        $service->save();
+        return redirect("/servicios");
     }
 
     /**
