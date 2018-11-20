@@ -11,13 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// HOME
+Route::get('/', 'HomeController@index');
+
 // ADMIN
-Route::get('/usuarios', 'UserController@index')->name('users-list');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'checkrole']], function() {
+    Route::get('/home', 'AdminController@index');
+    Route::get('/usuarios', 'UserController@index')->name('admin-users-list');
+    Route::get('/categorias', 'CategoryController@index')->name('admin-categories-list');
+    Route::get('/servicios', 'ServiceController@index')->name('admin-services-list');
+
+});
+
+// USER 
+Route::get('/servicios', 'ServiceController@index')->name('services-list');

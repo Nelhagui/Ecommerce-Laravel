@@ -36,8 +36,8 @@
                         <li class="nav-tiem"> 
                             <a class="nav-link" href="">Preguntas frecuentes</a>
                         </li>
-                        <li class="nav-tiem"> 
-                            <a class="nav-link" href="">Ofrecer un servicio</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Subir un servicio</a>
                         </li>
                     </ul>
 
@@ -71,6 +71,20 @@
                                     </form>
                                 </div>
                             </li>
+                            <li class="nav-item">
+                                @if (Auth::user()->role == 'admin')
+                                
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Dashboard') }}</a>
+                                @endif
+                            </li>
+                            <li class="nav-item">
+                                @if (Auth::user()->role == 'user')
+                                
+                                    <a class="nav-link" href="{{ route('services-list') }}">{{ __('Mis servicios') }}</a>
+                                @endif
+                            </li>
+    
+
                         @endguest
                     </ul>
                 </div>
