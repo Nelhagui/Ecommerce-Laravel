@@ -9,6 +9,7 @@ $factory->define(App\Service::class, function (Faker $faker) {
         'price' => $faker->numberBetween($min = 1000, $max = 6000),
         'category_id' => $faker->numberBetween($min = 1, $max = 15),
         'user_id' => $faker->numberBetween($min = 1, $max = 15),
+        'imagedescription' => $faker->imageUrl($width = 640, $height = 480),
 
     ];
 });

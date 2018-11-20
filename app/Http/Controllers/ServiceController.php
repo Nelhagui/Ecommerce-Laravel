@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Service;
-
+use App\User;
+use Illuminate\Support\Facades\Auth;
 class ServiceController extends Controller
 {
     /**
@@ -14,7 +15,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::paginate(5);
+        $user = Auth::user();
+        $services = $user->services;
         return view('services')->with('services', $services);
     }
 

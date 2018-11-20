@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Service;
 
 class HomeController extends Controller
 {
@@ -24,8 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        $users = User::all();
-        return view('home')->with('home', $users);
+        $services = Service::paginate(8);
+        // dd($services);
+        return view('home')->with('services', $services);
         
     }
 }
