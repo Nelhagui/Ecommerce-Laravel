@@ -28,15 +28,15 @@
                 <label for="description">Descripción</label>
             <textarea class="form-control" rows="5" id="description" name="description">{{ $service->description }}</textarea>
             </div>
-            {{-- <div class="form-group">
-                <label for="genero">Género</label>
-                <select class="form-control" name="genero">
-                <option value="{{ $genre->id }}" selected>{{ $genre->name }}</option>
-                @foreach($genres as $genre)
-                    <option value="{{ $genre->id }}">{{ $genre->name }}</option>
+            <div class="form-group">
+                <label for="category">Categoría</label>
+                <select class="form-control" name="category">
+                <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
             </select>
-            </div> --}}
+            </div>
 
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Confirmar Cambios">

@@ -63,7 +63,11 @@ class ServiceController extends Controller
     {
         $categories = Category::all();
         $service = Service::find($id);
-        return view('services.editservice')->with('service', $service);
+        $category = Category::find($service->category_id);
+        return view('services.editservice')
+            ->with('service', $service)
+            ->with('categories', $categories)
+            ->with('category', $category);
     }
 
     /**
@@ -79,7 +83,8 @@ class ServiceController extends Controller
 
         $service->name = $request->input('name');
         $service->price = $request->input('price');
-        $service->description = $request->input('description');  
+        $service->description = $request->input('description');
+        $service->category_id = $request->input('category'); 
         
         $service->save();
         return redirect("/servicios");
