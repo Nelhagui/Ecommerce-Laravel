@@ -6,7 +6,7 @@
 </div>
 
   
-      {{-- <main role="main">
+      <main role="main">
   
         <section class="jumbotron text-center">
           <div class="container">
@@ -33,7 +33,7 @@
                         <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                         <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                       </div>
-                      <small class="text-muted">9 mins</small>
+                      <small class="text-muted">{9 mins}</small>
                     </div>
                   </div>
                 </div>
@@ -184,5 +184,5 @@
       <script src="../../assets/js/vendor/popper.min.js"></script>
       <script src="../../dist/js/bootstrap.min.js"></script>
       <script src="../../assets/js/vendor/holder.min.js"></script>
- --}}
+
 @endsection
