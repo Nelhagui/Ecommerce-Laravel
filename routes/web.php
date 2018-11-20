@@ -24,7 +24,7 @@ Route::get('/', 'HomeController@index');
 
 // ADMIN
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'checkrole']], function() {
-    Route::get('/home', 'AdminController@index');
+    Route::get('/home', 'AdminController@index')->name('dashboard-home');
     Route::get('/usuarios', 'UserController@index')->name('admin-users-list');
     Route::get('/categorias', 'CategoryController@index')->name('admin-categories-list');
     Route::get('/servicios', 'ServiceController@index')->name('admin-services-list');

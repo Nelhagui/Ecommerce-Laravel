@@ -2,19 +2,25 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-sm">
-            <div class="list-categories">
-                <div class="list-group">
-                    <?php foreach($categories as $category): ?>
-    
-                        <div class="list-group-item list-group-item-action flex-column align-items-start">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">{{ $category->name}}</h5>
-                            </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
                         </div>
-                    <?php endforeach ?>
-                    {!! $categories->links() !!}
+                    @endif
+                    <h1 class="jumbotron-heading"><?="Bienvenido!" ?></h1>
+                    <p class="lead text-muted">Tu perfil es el de "Administrador" y estás autorizado a modificar los siguientes parámetros:</p>
+                    <p>
+                    <a href="" class="btn btn-primary my-2">Usuarios</a>
+                    <a href="" class="btn btn-primary my-2">Servicios Activos</a>
+                    <a href="" class="btn btn-primary my-2">Categorías</a>
+                    </p>
+
                 </div>
             </div>
         </div>

@@ -74,7 +74,7 @@
                             <li class="nav-item">
                                 @if (Auth::user()->role == 'admin')
                                 
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Dashboard') }}</a>
+                                    <a class="nav-link" href="{{ route('dashboard-home') }}">{{ __('Dashboard') }}</a>
                                 @endif
                             </li>
                             <li class="nav-item">
