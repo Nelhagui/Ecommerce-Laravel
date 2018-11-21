@@ -18,6 +18,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+
 </head>
 <body>
     <div id="app">
@@ -74,7 +79,7 @@
                             <li class="nav-item">
                                 @if (Auth::user()->role == 'admin')
                                 
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Dashboard') }}</a>
+                                    <a class="nav-link" href="{{ route('dashboard-home') }}">{{ __('Dashboard') }}</a>
                                 @endif
                             </li>
                             <li class="nav-item">
