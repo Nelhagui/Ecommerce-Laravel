@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        $services = Service::paginate(8);
+        $services = Service::paginate(4);
         // dd($services);
         return view('home')->with('services', $services);
         

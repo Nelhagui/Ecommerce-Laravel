@@ -32,6 +32,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'checkrole']], funct
 });
 
 // SERVICE 
+Route::get('/servicio/todos', 'ServiceController@allservices')->name('all-services');
 Route::get('/servicios', 'ServiceController@index')->name('services-list');
 Route::get('/servicio/{id}/edit', 'ServiceController@edit')->name('service-edit');
 Route::delete('servicio/{id}', 'ServiceController@destroy')->name('service-destroy');
