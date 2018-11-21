@@ -28,7 +28,8 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('services.addservice')->with('categories', $categories);
     }
 
     /**
