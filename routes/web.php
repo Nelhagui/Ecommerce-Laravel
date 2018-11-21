@@ -34,4 +34,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'checkrole']], funct
 // USER 
 Route::get('/servicios', 'ServiceController@index')->name('services-list');
 Route::get('/servicio/{id}/edit', 'ServiceController@edit')->name('services-edit');
-Route::patch('/servicio/{id}', 'ServiceController@update');
+Route::delete('servicio/{id}', 'ServiceController@destroy')->name('service-destroy');
+

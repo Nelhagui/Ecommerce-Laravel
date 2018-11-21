@@ -13,7 +13,18 @@
                         </h3>
                         <div class="mb-1 text-muted">Precio: ${{$service->price}}</div>
                         <p class="card-text mb-auto">{{$service->description}}</p>
-                        <a href="servicio/{{ $service->id }}/edit">Editar</a>
+                        <form action="/servicio/{{ $service->id }}" method="post" value="DELETE">
+                            {{ method_field('DELETE') }}
+                            {{ csrf_field() }}
+                            
+                            <a href="servicio/{{ $service->id }}/edit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Editar</a>
+
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+
+                        </form>
+            
+
+
                     </div>
                     <img class="card-img-right flex-auto d-none d-lg-block" src="{{$service->imagedescription}}" alt="Card image cap">
                     </div>
