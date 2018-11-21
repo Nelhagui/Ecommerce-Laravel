@@ -42,7 +42,7 @@
                             <a class="nav-link" href="">Preguntas frecuentes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Subir un servicio</a>
+                            <a class="nav-link" href="{{ route('service-add') }}">Subir un servicio</a>
                         </li>
                     </ul>
 
