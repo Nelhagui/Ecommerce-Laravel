@@ -21,6 +21,12 @@ class ServiceController extends Controller
         return view('services')->with('services', $services);
     }
 
+    public function allservices() 
+    {
+        $services = Service::paginate(8);
+        return view('services.allservices')->with('services', $services);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

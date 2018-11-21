@@ -9,6 +9,11 @@
 <div class="container">
     <div class="album py-5 bg-light">
         <div class="container">
+            <div class="preproductos">
+                <h6 class="display-3" style="display:inline">Buscás un servicio?</h6>
+                <p style="display:inline"><a class="btn btn-primary btn-lg" href="/servicio/todos" role="button" style="margin-bottom: 30px; margin-left: 20px">Ver Todos &raquo;</a></p>
+            </div>
+
             <div class="row">
                 <?php foreach($services as $service): ?>
                     <div class="col-md-3">
@@ -20,9 +25,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver Servicio</button>
-                                    {{-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> --}}
                                     </div>
-                                    {{-- <small class="text-muted">$service->ca</small> --}}
                                 </div>
                             </div>
                         </div>
