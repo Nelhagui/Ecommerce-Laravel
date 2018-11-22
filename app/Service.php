@@ -10,5 +10,8 @@ class Service extends Model
         return $this->belongsTo(User::class);
     }
 
+    protected $fillable = [
+        'name', 'description', 'price', 'category_id', 'user_id'
+    ];
 
 }

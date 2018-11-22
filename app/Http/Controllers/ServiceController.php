@@ -46,7 +46,27 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id = Auth::id();
+
+        $this->validate($request, [
+            "name" => 'required',
+            "price"  => 'required',
+            "description" => 'required',
+            "category" => 'required',
+        ]);
+
+        $service = new Service ([
+            'name' => $request->input("name"),
+            'price' => $request->input("price"),
+            'description' => $request->input("description"),
+            'category_id' => $request->input("category"),
+            'user_id' => $id,
+        ]);
+
+        $service->save();
+
+        return redirect()->route('services-list');
+
     }
 
     /**
