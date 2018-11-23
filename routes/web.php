@@ -32,9 +32,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'checkrole']], funct
 });
 
 // SERVICE 
+Route::get('/servicio/todos', 'ServiceController@allservices')->name('all-services');
 Route::get('/servicios', 'ServiceController@index')->name('services-list');
 Route::get('/servicio/{id}/edit', 'ServiceController@edit')->name('service-edit');
 Route::delete('servicio/{id}', 'ServiceController@destroy')->name('service-destroy');
 Route::get('/servicio/agregar', 'ServiceController@create')->name('service-add');
 Route::post('/servicio/agregar','ServiceController@store')->name('service-store');
+Route::patch('/servicio/{id}/edit', 'ServiceController@update')->name('service-update');
 

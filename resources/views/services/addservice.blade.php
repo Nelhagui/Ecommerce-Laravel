@@ -46,10 +46,10 @@
             @endforeach
         </select>
         </div>
-        <div class="form-group">
+        {{-- <div class="form-group">
             <label for="poster">Imagen</label>
             <input class="form-control" type="file" name="poster">
-        </div>
+        </div> --}}
 
         <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Agregar Servicio    ">
