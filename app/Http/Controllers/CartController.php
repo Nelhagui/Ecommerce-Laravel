@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use Illuminate\Support\Facades\Auth;
-class UserController extends Controller
+
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,25 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(5);
-        return view('admin.users')->with('users', $users);
-    }
-
-    public function profile()
-    {
-        $user = Auth::user(); 
-        return view('user.profile')->with('user', $user);
-        
-    }
-
-    public function update_avatar(Request $request)
-    {   $user = Auth::user();
-        if($request->hasFile('avatar'))
-        {
-            $user-> avatar = $request->file('avatar')->store('public/avatars');
-        }
-        $user->update();
-        return back()->with('info', 'Usuario Actualizado');
+        //
     }
 
     /**
