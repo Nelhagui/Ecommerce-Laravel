@@ -62,6 +62,23 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="provincia" class="col-md-4 col-form-label text-md-right">{{ __('Provincia') }}</label>
+                            <select class="col-md-6 form-control" id="provincia" name="provincia">
+                               <option>Seleccionar</option>
+                            </select>
+                            
+                        </div>
+                        
+                        <div class="form-group row">
+                                <label for="municipio" class="col-md-4 col-form-label text-md-right">{{ __('Municipio') }}</label>
+                                <select class="col-md-6 form-control" id="municipio" name="municipio">
+                                   <option>Seleccionar</option>
+                                </select>
+                                
+                            </div>
+    
+
+                        <div class="form-group row">
                             <label for="avatar" class="col-md-4 col-form-label text-md-right">{{ __('Imagen de Perfil') }}</label>
 
                             <div class="col-md-6">
@@ -85,4 +102,5 @@
         </div>
     </div>
 </div>
+<script src="js/master.js"></script>
 @endsection
