@@ -22,7 +22,6 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->string('genre')->nullable();
-            $table->string('imageuser')->nullable();
             $table->string('description')->nullable();
             $table->string('role', 10)->nullable();
         });

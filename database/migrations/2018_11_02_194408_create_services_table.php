@@ -21,7 +21,7 @@ class CreateServicesTable extends Migration
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
             $table->integer('price');
-            $table->string('name', 50);
+            $table->string('name', 100);
             $table->string('description', 200);
             $table->string('imagedescription', 100)->nullable();
             $table->string('videoservice', 100)->nullable();
