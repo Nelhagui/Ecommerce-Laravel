@@ -46,6 +46,14 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
+
+        if($request->hasFile('imagedescription'))
+        {
+            $image = $request->file('imagedescription')->store('public/services');
+        } else {
+            $image = '/services/defaultservice.jpg';
+        }
+        // dd($image);
         $id = Auth::id();
 
         $this->validate($request, [
@@ -61,6 +69,7 @@ class ServiceController extends Controller
             'description' => $request->input("description"),
             'category_id' => $request->input("category"),
             'user_id' => $id,
+            'imagedescription' => $image,
         ]);
 
         $service->save();
@@ -108,12 +117,18 @@ class ServiceController extends Controller
     {
         $service = Service::find($id);
 
+        if($request->hasFile('imagedescription'))
+        {
+            $service->imagedescription = $request->file('imagedescription')->store('public/services');
+        }
+
+
         $service->name = $request->input('name');
         $service->price = $request->input('price');
         $service->description = $request->input('description');
-        $service->category_id = $request->input('category'); 
-        
-        $service->save();
+        $service->category_id = $request->input('category');
+
+        $service->update();
         return redirect("/servicios");
     }
 
