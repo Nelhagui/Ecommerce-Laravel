@@ -40,3 +40,7 @@ Route::get('/servicio/agregar', 'ServiceController@create')->name('service-add')
 Route::post('/servicio/agregar','ServiceController@store')->name('service-store');
 Route::patch('/servicio/{id}/edit', 'ServiceController@update')->name('service-update');
 
+
+// USER
+Route::get('/profile', 'UserController@profile')->name('profile')->middleware('auth');
+Route::post('/profile', 'UserController@update_avatar');
