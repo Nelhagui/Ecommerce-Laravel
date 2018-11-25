@@ -39,8 +39,15 @@ Route::delete('servicio/{id}', 'ServiceController@destroy')->name('service-destr
 Route::get('/servicio/agregar', 'ServiceController@create')->name('service-add');
 Route::post('/servicio/agregar','ServiceController@store')->name('service-store');
 Route::patch('/servicio/{id}/edit', 'ServiceController@update')->name('service-update');
+Route::get('/servicio/detalle/{id}', 'ServiceController@show')->name('detailservice');
 
 
 // USER
 Route::get('/profile', 'UserController@profile')->name('profile')->middleware('auth');
 Route::post('/profile', 'UserController@update_avatar');
+
+
+// CART
+Route::post('/carrito/agregar', 'ServiceController@addCart');
+Route::get('/carrito', 'CartController@index')->name('cart')->middleware('auth');
+Route::get('/carrito/{id}/quitar', 'CartController@remove')->name('cart.remove');

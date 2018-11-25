@@ -18,7 +18,7 @@
                                 <p class="card-text">{{$service->description}}</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver Servicio</button>
+                                            <a href="/servicio/detalle/{{$service->id}}" class="btn btn-info" role="button">Ver Servicio</a>
                                         </div>
                                     </div>
                                 </div>
