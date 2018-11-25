@@ -9,6 +9,7 @@ use App\Category;
 use Illuminate\Support\Facades\Auth;
 class ServiceController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -26,6 +27,17 @@ class ServiceController extends Controller
         $services = Service::paginate(8);
         return view('services.allservices')->with('services', $services);
     }
+
+    public function addCart(Request $request)
+    {    
+        	    	
+    	$request->session()->push('cart.service', [
+    		'id' => $request->id,
+    	]);
+        // dd(session('cart.service'));
+    	return redirect()->back();
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -86,7 +98,9 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        //
+        $service = Service::find($id);
+        return view ('services.detailservice')->with('service', $service);
+
     }
 
     /**

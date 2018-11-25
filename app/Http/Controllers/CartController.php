@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Service;
 
 class CartController extends Controller
 {
@@ -13,10 +14,36 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        $services = [];
+        $session_services = session('cart.service', $services);
+
+        foreach ($session_services as $key => $value) {
+            $service = Service::find($session_services[$key]['id']);
+            // $service->stock = $session_services[$key]['stock'];
+            $services[] = $service; 
+        }
+        // dd($services);
+        return view('cart.cartservices')->with('services', $services);
     }
 
-    /**
+    public function remove($id, Request $request)
+    {  
+        // dd($request->session('cart.services'));
+        // dd(collect($request->session()->get('cart.services')));
+        $services = collect($request->session()->get('cart.service'));
+        // dd($services);
+        $services->filter(function($value, $key) use ($id) {
+            return $value['id'] == $id;
+        })->keys()->each(function($item) use ($request) {
+            $request->session()->forget("cart.service.$item");
+        });
+        
+        return redirect()->back();
+    }
+
+
+    /**        // dd($services);
+
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
