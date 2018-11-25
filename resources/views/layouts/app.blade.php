@@ -98,9 +98,10 @@
                                     <a class="nav-link" href="{{ route('services-list') }}">{{ __('Mis servicios') }}</a>
                                 @endif
                             </li>
-    
-
                         @endguest
+                        <a href="{{ route('cart')}}">
+                            <img width="20px" height="20px" src="/images/cart.svg" style="margin: 10px" alt="">
+                        </a>
                     </ul>
                 </div>
             </div>
