@@ -102,6 +102,6 @@
         </div>
     </div>
 </div>
-<script src="js/master.js"></script>
+
 
 @endsection
