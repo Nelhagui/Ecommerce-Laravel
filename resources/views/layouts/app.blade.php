@@ -39,7 +39,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-tiem"> 
-                            <a class="nav-link" href="">Preguntas frecuentes</a>
+                            <a class="nav-link" href="/preguntasfrecuentes">Preguntas frecuentes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('service-add') }}">Subir un servicio</a>
