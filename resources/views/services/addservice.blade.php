@@ -46,10 +46,19 @@
             @endforeach
         </select>
         </div>
-        {{-- <div class="form-group">
-            <label for="poster">Imagen</label>
-            <input class="form-control" type="file" name="poster">
-        </div> --}}
+        <div class="form-group">
+            <label for="imagedescription">Imagen</label>
+            <input class="form-control" type="file" name="imagedescription">
+        </div>
+
+
+        {{-- <form enctype="multipart/form-data" action="/profile" method="POST">
+            <label>Subir imágen de perfil</label>
+            <input type="file" name="avatar">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="submit" class="pull-right btn btn-sm btn-primary" value="Guardar ">
+        </form> --}}
+
 
         <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Agregar Servicio    ">

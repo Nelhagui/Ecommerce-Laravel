@@ -38,6 +38,12 @@
             </select>
             </div>
             <div class="form-group">
+                <img width="150" src="{{ Storage::url($service->imagedescription)}}" alt="">
+                <label for="imagedescription">Imagen</label>
+                <input class="form-control" type="file" name="imagedescription">
+            </div>
+        
+            <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Confirmar Cambios">
             </div>
         </form>

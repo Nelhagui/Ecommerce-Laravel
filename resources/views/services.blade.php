@@ -26,7 +26,7 @@
 
 
                     </div>
-                    <img class="card-img-right flex-auto d-none d-lg-block" src="{{$service->imagedescription}}" alt="Card image cap">
+                    <img width="200px" height="170px" class="card-img-right flex-auto d-none d-lg-block" src="{{ Storage::url($service->imagedescription) }}" alt="Card image cap">
                     </div>
                 </div>
             <?php endforeach ?>
