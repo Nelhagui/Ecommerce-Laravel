@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="/js/validaciones.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -39,7 +40,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-tiem"> 
-                            <a class="nav-link" href="">Preguntas frecuentes</a>
+                            <a class="nav-link" href="/preguntasfrecuentes">Preguntas frecuentes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('service-add') }}">Subir un servicio</a>
@@ -107,9 +108,16 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="main">
             @yield('content')
         </main>
     </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/master.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/holder.min.js"></script>
 </body>
 </html>
