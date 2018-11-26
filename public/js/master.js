@@ -1,12 +1,12 @@
 window.onload=function(){
     var provinciaselect = document.querySelector("#provincia")
-    provinciaselect.addEventListener('change', datos)
     var municipioselect = document.querySelector("#municipio")
     var seleccion = ''
 
     function datos () {
         
         seleccion = (provinciaselect.options[provinciaselect.selectedIndex].value)
+        console.log('seleccion: ', seleccion)
         return seleccion
     }
 
@@ -22,20 +22,21 @@ window.onload=function(){
                 opciones.value = indice.id
                 opciones.innerHTML = indice.nombre
                 provinciaselect.appendChild(opciones)
-                provinciaselect.
             }
         })
     }
-    // console.log(select.options[provinciaselect.selectedIndex].value)
-    console.log(datos())
-
+provinciaselect.addEventListener('change', function() {
+    datos()
     mostrarMunicipios(seleccion)
+
+});
 
 
     function mostrarMunicipios(seleccion){
         fetch("https://apis.datos.gob.ar/georef/api/municipios?provincia="+seleccion+"&campos=id,nombre&max=100")
         .then(resultado => resultado.json())
         .then(data => {
+                municipioselect.innerHTML = "<option>Seleccionar</option>";
             for (var indice of data.municipios){
                 var opcionesMuni = document.createElement("option")
                 opcionesMuni.value = indice.indice
