@@ -51,3 +51,6 @@ Route::post('/profile', 'UserController@update_avatar');
 Route::post('/carrito/agregar', 'ServiceController@addCart');
 Route::get('/carrito', 'CartController@index')->name('cart')->middleware('auth');
 Route::get('/carrito/{id}/quitar', 'CartController@remove')->name('cart.remove');
+
+//FAQS
+Route::get('/preguntasfrecuentes', 'preguntasFrecuentesController@index');
