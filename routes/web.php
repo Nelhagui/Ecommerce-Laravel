@@ -36,8 +36,8 @@ Route::get('/servicio/todos', 'ServiceController@allservices')->name('all-servic
 Route::get('/servicios', 'ServiceController@index')->name('services-list');
 Route::get('/servicio/{id}/edit', 'ServiceController@edit')->name('service-edit');
 Route::delete('servicio/{id}', 'ServiceController@destroy')->name('service-destroy');
-Route::get('/servicio/agregar', 'ServiceController@create')->name('service-add');
-Route::post('/servicio/agregar','ServiceController@store')->name('service-store');
+Route::get('/servicio/agregar', 'ServiceController@create')->name('service-add')->middleware('auth');
+Route::post('/servicio/agregar','ServiceController@store')->name('service-store')->middleware('auth');
 Route::patch('/servicio/{id}/edit', 'ServiceController@update')->name('service-update');
 Route::get('/servicio/detalle/{id}', 'ServiceController@show')->name('detailservice');
 
@@ -48,7 +48,7 @@ Route::post('/profile', 'UserController@update_avatar');
 
 
 // CART
-Route::post('/carrito/agregar', 'ServiceController@addCart');
+Route::post('/carrito/agregar', 'ServiceController@addCart')->middleware('auth');
 Route::get('/carrito', 'CartController@index')->name('cart')->middleware('auth');
 Route::get('/carrito/{id}/quitar', 'CartController@remove')->name('cart.remove');
 
