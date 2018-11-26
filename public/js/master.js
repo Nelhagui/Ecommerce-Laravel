@@ -6,7 +6,6 @@ window.onload=function(){
     function datos () {
         
         seleccion = (provinciaselect.options[provinciaselect.selectedIndex].value)
-        console.log('seleccion: ', seleccion)
         return seleccion
     }
 
