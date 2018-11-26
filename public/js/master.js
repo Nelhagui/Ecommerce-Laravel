@@ -1,6 +1,16 @@
 window.onload=function(){
-    var provinciaselect = document.getElementById("provincia")
-    // var municipioselect = document.getElementById("municipio")
+    var provinciaselect = document.querySelector("#provincia")
+    provinciaselect.addEventListener('change', datos)
+    var municipioselect = document.querySelector("#municipio")
+    var seleccion = ''
+
+    function datos () {
+        
+        seleccion = (provinciaselect.options[provinciaselect.selectedIndex].value)
+        return seleccion
+    }
+
+
     mostrarDatos()
 
     function mostrarDatos(){
@@ -9,28 +19,33 @@ window.onload=function(){
         .then(data => {
             for (var indice of data.provincias) {
                 var opciones = document.createElement("option")
-                opciones.value = indice.indice
+                opciones.value = indice.id
                 opciones.innerHTML = indice.nombre
                 provinciaselect.appendChild(opciones)
+                provinciaselect.
             }
         })
     }
-    // var idprovincia = 22
-    mostrarMunicipios()
-    // function mostrarMunicipios(){
-    //     fetch("https://apis.datos.gob.ar/georef/api/municipios?provincia="+idprovincia+"&campos=id,nombre&max=100")
-    //     .then(resultado => resultado.json())
-    //     .then(data => {
-    //         for (var indice of data.municipios){
-    //             var opcionesMuni = document.createElement("option")
-    //             opcionesMuni.value = indice.indice
-    //             opcionesMuni.innerHTML = indice.nombre
-    //             municipioselect.appendChild(opcionesMuni)
-    //         }
+    // console.log(select.options[provinciaselect.selectedIndex].value)
+    console.log(datos())
 
-    //     })
+    mostrarMunicipios(seleccion)
 
-    // }
+
+    function mostrarMunicipios(seleccion){
+        fetch("https://apis.datos.gob.ar/georef/api/municipios?provincia="+seleccion+"&campos=id,nombre&max=100")
+        .then(resultado => resultado.json())
+        .then(data => {
+            for (var indice of data.municipios){
+                var opcionesMuni = document.createElement("option")
+                opcionesMuni.value = indice.indice
+                opcionesMuni.innerHTML = indice.nombre
+                municipioselect.appendChild(opcionesMuni)
+            }
+
+        })
+
+    }
 
 
 
