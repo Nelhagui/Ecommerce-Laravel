@@ -61,7 +61,7 @@ class ServiceController extends Controller
 
         if($request->hasFile('imagedescription'))
         {
-            $image = $request->file('imagedescription')->store('public/services', 'public');
+            $image = $request->file('imagedescription')->store('services', 'public');
         } else {
             $image = '/services/defaultservice.jpg';
         }
