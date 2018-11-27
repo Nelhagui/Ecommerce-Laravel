@@ -15,6 +15,11 @@
 //     return view('welcome');
 // });
 
+Route::get('/artisanlinksarasa', function() {
+    \Artisan::call('storage:link');
+    dd("listorti");
+ });
+ 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
