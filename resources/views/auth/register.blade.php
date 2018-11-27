@@ -61,7 +61,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        {{-- <div class="form-group row">
                             <label for="provincia" class="col-md-4 col-form-label text-md-right">{{ __('Provincia') }}</label>
                             <select class="col-md-6 form-control" id="provincia" name="provincia">
                                <option>Seleccionar</option>
@@ -75,7 +75,7 @@
                                 <option>Seleccionar</option>
                             </select>
                             
-                        </div>
+                        </div> --}}
     
 
                         <div class="form-group row">
