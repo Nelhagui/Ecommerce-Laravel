@@ -50,6 +50,12 @@
                         <li class="nav-tiem"> 
                             <a class="nav-link" href="/servicio/todos">Todos los Servicios</a>
                         </li>
+                        <li class='nav-busqueda'>
+                                <form action="/busqueda" method='get'>
+                                  <input type="text" name='services' class='input-text' placeholder='Buscar...'>
+                                  <input type="submit" value='Buscar'>
+                                </form>
+                              </li>                  
 
                     </ul>
 
@@ -72,15 +78,20 @@
                                 @endif
                             </li>
 
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown" >
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" >
                                     <a class="dropdown-item" href="{{ route('profile') }}">
                                          {{ __('Perfil') }}
                                      </a>
+                                     {{-- @if (Auth::user()->role == 'user') --}}
+                                     <a class="dropdown-item" href="{{ route('services-list') }}">{{ __('Mis servicios') }}
+                                    </a>
+                                     {{-- @endif --}}
+
  
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -95,14 +106,7 @@
                             </li>
                             <li class="nav-item">
                                 @if (Auth::user()->role == 'admin')
-                                
                                     <a class="nav-link" href="{{ route('dashboard-home') }}">{{ __('Dashboard') }}</a>
-                                @endif
-                            </li>
-                            <li class="nav-item">
-                                @if (Auth::user()->role == 'user')
-                                
-                                    <a class="nav-link" href="{{ route('services-list') }}">{{ __('Mis servicios') }}</a>
                                 @endif
                             </li>
                         @endguest
