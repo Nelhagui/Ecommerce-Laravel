@@ -7,6 +7,7 @@ use App\Service;
 use App\User;
 use App\Category;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 class ServiceController extends Controller
 {
 
@@ -145,6 +146,16 @@ class ServiceController extends Controller
         $service->update();
         return redirect("/servicios");
     }
+
+    public  function search ()
+   {
+       $services = Input::get('services');
+       // y aca escribis la query
+
+       $search_service = DB::table('services')->where('name', 'LIKE',"%$services%")->get();
+
+       return view('layouts.resultados')->with('search_service', $search_service);
+   }
 
     /**
      * Remove the specified resource from storage.

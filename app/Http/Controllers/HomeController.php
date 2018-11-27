@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Service;
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -26,8 +27,11 @@ class HomeController extends Controller
     public function index()
     {   
         $services = Service::paginate(4);
+        $categories = Category::all();
         // dd($services);
-        return view('home')->with('services', $services);
+        return view('home')
+        ->with('services', $services)
+        ->with('categories', $categories);
         
     }
 }
