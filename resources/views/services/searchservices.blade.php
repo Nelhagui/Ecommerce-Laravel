@@ -1,21 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-
-
-
-
         <div class="container">
             <div class="row categorias">
-                <hr style="width: 100%">
-                
-                @foreach ($services as $service)
-                    <ul>{{$service->category['name']}}</ul> 
-                @endforeach
-                <hr style="width: 100%">
+                {{-- <hr style="width: 100%"> --}}
+                {{-- {{dd($search_service)}} --}}
+                {{-- <hr style="width: 100%"> --}}
             </div>
             <div class="row mb-2">
-                            <?php foreach($services as $service): ?>
+                @if (!count($search_service) )
+                    <h1>No hay resultados que coincidan con la búsqueda</h1>
+                 @else 
+                    <h4>Servicios que coinciden con tu búsqueda:</h4>
+                    <hr style="width: 100%">
+                            <?php foreach($search_service as $service): ?>
                                 <div class="col-md-6">
                                     <div class="card flex-md-row mb-4 shadow-sm h-md-250">
                                         <div class="card-body d-flex flex-column align-items-start">
@@ -37,18 +35,7 @@
                                     </div>
                                 </div>
                             <?php endforeach ?>
-                            <h1>Todos los servicios:</h1>
-                            {!! $services->links() !!}
-                
+                @endif            
                         </div>
                     </div>
-
-
-    
-
-
-
-
-
-
 @endsection
