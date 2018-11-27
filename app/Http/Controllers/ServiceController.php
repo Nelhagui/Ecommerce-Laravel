@@ -8,6 +8,7 @@ use App\User;
 use App\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use DB;
 class ServiceController extends Controller
 {
 
@@ -150,11 +151,8 @@ class ServiceController extends Controller
     public  function search ()
    {
        $services = Input::get('services');
-       // y aca escribis la query
-
        $search_service = DB::table('services')->where('name', 'LIKE',"%$services%")->get();
-
-       return view('layouts.resultados')->with('search_service', $search_service);
+       return view('services.searchservices')->with('search_service', $search_service);
    }
 
     /**

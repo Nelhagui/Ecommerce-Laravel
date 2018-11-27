@@ -51,8 +51,8 @@
                             <a class="nav-link" href="/servicio/todos">Todos los Servicios</a>
                         </li>
                         <li class='nav-busqueda'>
-                                <form action="#" method='get'>
-                                  <input type="text" name='busqueda' class='input-text' placeholder='Buscar...'>
+                                <form action="/busqueda" method='get'>
+                                  <input type="text" name='services' class='input-text' placeholder='Buscar...'>
                                   <input type="submit" value='Buscar'>
                                 </form>
                               </li>                  
