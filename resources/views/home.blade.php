@@ -75,24 +75,19 @@
               <h1>No te quedes atrás</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
             </div>
-              <div class="row">
-                  <?php foreach($categories as $category): ?>
-                      <div class="col-md-3">
-                          <div class="card mb-4 shadow-sm">
-                          {{-- <img class="card-img-top" src="{{ Storage::url($category->imagedescription)}}" alt="Card image cap"> --}}
-                              <div class="card-body">
-                              <h5 class="mb-1">{{ $category->name}}</h5>
-                              {{-- <p class="card-text">{{$category->category['description']}}</p> --}}
-                                  <div class="d-flex justify-content-between align-items-center">
-                                      <div class="btn-group">
-                                      <button type="button" class="btn btn-sm btn-outline-secondary">Ver Servicio</button>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      {{-- <div class="col-3"></div> --}}
-                  <?php endforeach ?>
+              <div class="row imagenescategorias">
+                <div class="col-4 ">
+                  <h3>Deportes</h3>
+                  <p>Buscá tu personal trainer</p>
+                  <img width="100%" src="images/categories/deporte.jpg" alt="">
+                </div>
+                <div class="col-4">
+                    <img width="100%" src="images/categories/gastronomia.jpg" alt="">
+                  </div>
+                  <div class="col-4">
+                      <img width="100%" src="images/categories/educacion.jpeg" alt="">
+                    </div>
+      
               </div>
           </div>
       </div>

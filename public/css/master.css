@@ -38,3 +38,24 @@ input.input-text {
     margin: 5%;
     
 }
+
+.imagenescategorias img {
+    border-radius: 6px;
+}
+
+.imagenescategorias h3 {
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 10%;
+    top: 10px;
+    text-align: center;
+}
+.imagenescategorias p {
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 10%;
+    top: 35px;
+    text-align: center;
+}
