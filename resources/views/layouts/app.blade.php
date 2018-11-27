@@ -21,6 +21,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/master.css') }}" rel="stylesheet">
+
 
 
 
@@ -45,6 +47,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('service-add') }}">Subir un servicio</a>
                         </li>
+                        <li class="nav-tiem"> 
+                            <a class="nav-link" href="/servicio/todos">Todos los Servicios</a>
+                        </li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
