@@ -34,7 +34,7 @@ input.input-text {
 
     .imagenescategorias img {
         border-radius: 6px;
-        box-shadow: 7px 6px 8px -3px rgba(0, 0, 0, 0.28);
+        /* box-shadow: 7px 6px 8px -3px rgba(0, 0, 0, 0.28); */
         border: 1px solid #0202024d;
         margin: 10px 0px;
     }
