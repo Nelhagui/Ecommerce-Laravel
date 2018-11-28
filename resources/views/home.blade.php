@@ -77,15 +77,25 @@
             </div>
               <div class="row imagenescategorias">
                 <div class="col-4 ">
-                  <h3>Deportes</h3>
-                  <p>Buscá tu personal trainer</p>
-                  <img width="100%" src="images/categories/deporte.jpg" alt="">
+                  <a href="#">
+                    <h3>Deportes</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <img id="imagencategoria" width="100%" src="images/categories/deporte.jpg" alt="">
+                  </a>
                 </div>
                 <div class="col-4">
-                    <img width="100%" src="images/categories/gastronomia.jpg" alt="">
+                  <a href="#">
+                    <h3>Gastronomía</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                      <img id="imagencategoria" width="100%" src="images/categories/gastronomia.jpg" alt="">
+                    </a>
                   </div>
                   <div class="col-4">
-                      <img width="100%" src="images/categories/educacion.jpeg" alt="">
+                    <a href="#">
+                      <h3>Educación</h3>
+                      <p>Lorem ipsum dolor sit amet</p>    
+                      <img id="imagencategoria" width="100%" src="images/categories/educacion.jpeg" alt="">
+                    </a>
                     </div>
       
               </div>
