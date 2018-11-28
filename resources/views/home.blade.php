@@ -76,21 +76,21 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
             </div>
               <div class="row imagenescategorias">
-                <div class="col-4 ">
+                <div class="col-sm-4 col-xs-12 ">
                   <a href="#">
                     <h3>Deportes</h3>
                     <p>Lorem ipsum dolor sit amet</p>
                     <img id="imagencategoria" width="100%" src="images/categories/deporte.jpg" alt="">
                   </a>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-4 col-xs-12">
                   <a href="#">
                     <h3>Gastronomía</h3>
                     <p>Lorem ipsum dolor sit amet</p>
                       <img id="imagencategoria" width="100%" src="images/categories/gastronomia.jpg" alt="">
                     </a>
                   </div>
-                  <div class="col-4">
+                  <div class="col-sm-4 col-xs-12">
                     <a href="#">
                       <h3>Educación</h3>
                       <p>Lorem ipsum dolor sit amet</p>    
