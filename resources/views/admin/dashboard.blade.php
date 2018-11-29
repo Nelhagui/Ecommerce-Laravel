@@ -18,7 +18,7 @@
                     <p>
                     <a href="" class="btn btn-primary my-2">Usuarios</a>
                     <a href="" class="btn btn-primary my-2">Servicios Activos</a>
-                    <a href="" class="btn btn-primary my-2">Categorías</a>
+                    <a href="{{route ('admin-categories-list')}}" class="btn btn-primary my-2">Categorías</a>
                     </p>
 
                 </div>

@@ -13,32 +13,13 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="first-slide" src="images/banner-home.jpg" alt="First slide">
-              <div class="container">
-                <div class="carousel-caption text-left">
-                  <h1>Example headline.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                </div>
-              </div>
             </div>
             <div class="carousel-item">
               <img class="second-slide" src="images/banner-home.jpg" alt="Second slide">
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Another example headline.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                </div>
-              </div>
             </div>
             <div class="carousel-item">
               <img class="third-slide" src="images/banner-home.jpg" alt="Third slide">
               <div class="container">
-                <div class="carousel-caption text-right">
-                  <h1>One more for good measure.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                </div>
               </div>
             </div>
           </div>
@@ -75,24 +56,29 @@
               <h1>No te quedes atrás</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
             </div>
-              <div class="row">
-                  <?php foreach($categories as $category): ?>
-                      <div class="col-md-3">
-                          <div class="card mb-4 shadow-sm">
-                          {{-- <img class="card-img-top" src="{{ Storage::url($category->imagedescription)}}" alt="Card image cap"> --}}
-                              <div class="card-body">
-                              <h5 class="mb-1">{{ $category->name}}</h5>
-                              {{-- <p class="card-text">{{$category->category['description']}}</p> --}}
-                                  <div class="d-flex justify-content-between align-items-center">
-                                      <div class="btn-group">
-                                      <button type="button" class="btn btn-sm btn-outline-secondary">Ver Servicio</button>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      {{-- <div class="col-3"></div> --}}
-                  <?php endforeach ?>
+              <div class="row imagenescategorias">
+                <div class="col-sm-4 col-xs-12 ">
+                  <a href="#">
+                    <h3>Deportes</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <img id="imagencategoria" width="100%" src="images/categories/deporte.jpg" alt="">
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                  <a href="#">
+                    <h3>Gastronomía</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                      <img id="imagencategoria" width="100%" src="images/categories/gastronomia.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="col-sm-4 col-xs-12">
+                    <a href="#">
+                      <h3>Educación</h3>
+                      <p>Lorem ipsum dolor sit amet</p>    
+                      <img id="imagencategoria" width="100%" src="images/categories/educacion.jpeg" alt="">
+                    </a>
+                    </div>
+      
               </div>
           </div>
       </div>

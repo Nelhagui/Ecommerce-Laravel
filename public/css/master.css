@@ -1,9 +1,3 @@
-.row.categorias {
-    /* background-color: rgb(241, 241, 241); */
-    margin: 10px 0px 10px 0px;
-    text-decoration: none;  
-}
-
 li.nav-busqueda {
     display: flex;
     align-items: center;
@@ -32,9 +26,48 @@ input.input-text {
     padding-left: 23px;
     
 }
+/* HOME-PROMOCIÓN CATEGORÍAS -----------------------------------------------*/
+    .titulo-categoria {
+        text-align: center;
+        margin: 5%; 
+    }
 
-.titulo-categoria {
-    text-align: center;
-    margin: 5%;
+    .imagenescategorias img {
+        border-radius: 6px;
+        /* box-shadow: 7px 6px 8px -3px rgba(0, 0, 0, 0.28); */
+        border: 1px solid #0202024d;
+        margin: 10px 0px;
+    }
+
+    .imagenescategorias h3 {
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        left: 10%;
+        top: 20px;
+        text-align: center;
+    }
+
+    .imagenescategorias p {
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        left: 10%;
+        top: 45px;
+        text-align: center;
+    }
+
+    .row .imagenescategorias {
+        margin: 10px 0px;
+    }
     
+/* FIN HOME-PROMOCIÓN CATEGORIAS */
+
+
+/* CATEGORIES ADMIN -------------------------------------------------------------*/
+
+.row .categories-admin {
+    /* background-color: rgb(243, 243, 243); */
+    margin: 5px 0px;
+    padding: 10px;
 }
