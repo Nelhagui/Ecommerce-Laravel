@@ -21,13 +21,19 @@ class ServiceController extends Controller
     {
         $user = Auth::user();
         $services = $user->services;
-        return view('services')->with('services', $services);
+
+        return view('services')
+        ->with('services', $services);
     }
 
     public function allservices() 
     {
-        $services = Service::paginate(8);
-        return view('services.allservices')->with('services', $services);
+        $services = Service::paginate(6);
+        $categories = Category::all();
+        
+        return view('services.allservices')
+        ->with('services', $services)
+        ->with('categories', $categories);
     }
 
     public function addCart(Request $request)

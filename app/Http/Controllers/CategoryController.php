@@ -48,7 +48,12 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $category = Category::find($id);
+        $allcategories = Category::all();
+
+        return view('categories.show')
+        ->with('allcategories', $allcategories)
+        ->with('category', $category);
     }
 
     /**
