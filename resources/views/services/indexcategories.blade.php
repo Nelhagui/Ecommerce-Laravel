@@ -33,18 +33,8 @@
                                     </div>
                                 </div>
                             <?php endforeach ?>
-                            <h1>Todos los servicios:</h1>
-                            {!! $services->links() !!}
+                            
                 
                         </div>
                     </div>
-
-
-    
-
-
-
-
-
-
 @endsection

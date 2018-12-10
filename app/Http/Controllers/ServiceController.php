@@ -177,4 +177,12 @@ class ServiceController extends Controller
         $services = Service::all();
         return view('admin.services')->with('services', $services);
     }
+
+    public function indexCategories($id) {
+        $categories = Category::all();
+        $services = Service::where('category_id', 'LIKE', '%' .$id)->get();
+        return view('services.indexcategories')
+        ->with('services', $services)
+        ->with('categories', $categories);
+    }
 }
