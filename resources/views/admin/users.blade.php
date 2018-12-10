@@ -1,23 +1,34 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-sm">
-            <div class="list-categories">
-                <div class="list-group">
-                    <?php foreach($users as $usuario): ?>
-    
-                        <div class="list-group-item list-group-item-action flex-column align-items-start">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">{{ $usuario->name}}</h5>
-                            </div>
-                        </div>
-                    <?php endforeach ?>
-                    {!! $users->links() !!}
-                </div>
-            </div>
-        </div>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach ($users as $user)
+    <tr>
+      <th scope="row">{{$user->id}}</th>
+      <td>{{$user->name}}</td>
+      <td>{{$user->email}}</td>
+      <td>{{$user->role}}</td>
+      <td><form action="usuario/{{ $user->id }}" method="post" value="DELETE">
+        {{ method_field('DELETE') }}
+        {{ csrf_field() }}
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        </form></td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
     </div>
 </div>
 @endsection
