@@ -54,3 +54,6 @@ Route::get('/carrito/{id}/quitar', 'CartController@remove')->name('cart.remove')
 
 //FAQS
 Route::get('/preguntasfrecuentes', 'preguntasFrecuentesController@index');
+
+//SEARCH
+Route::get('/busqueda', 'ServiceController@search');
