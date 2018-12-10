@@ -18,7 +18,7 @@ window.onload=function(){
         .then(data => {
             for (var indice of data.provincias) {
                 var opciones = document.createElement("option")
-                opciones.value = indice.id
+                opciones.value = indice.nombre
                 opciones.innerHTML = indice.nombre
                 provinciaselect.appendChild(opciones)
             }
@@ -38,7 +38,7 @@ provinciaselect.addEventListener('change', function() {
                 municipioselect.innerHTML = "<option>Seleccionar</option>";
             for (var indice of data.municipios){
                 var opcionesMuni = document.createElement("option")
-                opcionesMuni.value = indice.indice
+                opcionesMuni.value = indice.nombre
                 opcionesMuni.innerHTML = indice.nombre
                 municipioselect.appendChild(opcionesMuni)
             }
