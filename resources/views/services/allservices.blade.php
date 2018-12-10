@@ -1,16 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-
-
-
-
         <div class="container">
             <div class="row categorias">
                 <hr style="width: 100%">
                 
-                @foreach ($services as $service)
-                    <ul>{{$service->category['name']}}</ul> 
+                @foreach ($categories as $category)
+                    <ul>{{$category->name}}</ul> 
                 @endforeach
                 <hr style="width: 100%">
             </div>

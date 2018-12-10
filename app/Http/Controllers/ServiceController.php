@@ -27,7 +27,11 @@ class ServiceController extends Controller
     public function allservices() 
     {
         $services = Service::paginate(8);
-        return view('services.allservices')->with('services', $services);
+        $categories = Category::all();
+
+        return view('services.allservices')
+        ->with('services', $services)
+        ->with('categories', $categories);
     }
 
     public function addCart(Request $request)
