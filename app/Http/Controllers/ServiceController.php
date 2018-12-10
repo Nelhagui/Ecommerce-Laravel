@@ -27,7 +27,11 @@ class ServiceController extends Controller
     public function allservices() 
     {
         $services = Service::paginate(8);
-        return view('services.allservices')->with('services', $services);
+        $categories = Category::all();
+
+        return view('services.allservices')
+        ->with('services', $services)
+        ->with('categories', $categories);
     }
 
     public function addCart(Request $request)
@@ -172,5 +176,13 @@ class ServiceController extends Controller
     public function adminIndex() {
         $services = Service::all();
         return view('admin.services')->with('services', $services);
+    }
+
+    public function indexCategories($id) {
+        $categories = Category::all();
+        $services = Service::where('category_id', 'LIKE', '%' .$id)->get();
+        return view('services.indexcategories')
+        ->with('services', $services)
+        ->with('categories', $categories);
     }
 }

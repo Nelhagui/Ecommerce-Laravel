@@ -21,5 +21,7 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
         'role' => $faker -> randomElement(['user', 'seller']),
         'avatar' => NULL,
+        'provincia' => NULL,
+        'municipio' => NULL,
     ];
 });

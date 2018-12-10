@@ -44,6 +44,7 @@ Route::get('/servicio/agregar', 'ServiceController@create')->name('service-add')
 Route::post('/servicio/agregar','ServiceController@store')->name('service-store')->middleware('auth');
 Route::patch('/servicio/{id}/edit', 'ServiceController@update')->name('service-update');
 Route::get('/servicio/detalle/{id}', 'ServiceController@show')->name('detailservice');
+Route::get('/servicio/categoria/{id}', 'ServiceController@indexCategories')->name('service-indexcategories');
 
 
 // USER
