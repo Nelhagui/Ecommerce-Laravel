@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Service;
+use App\User;
+use App\Category;
 
 class AdminController extends Controller
 {
@@ -81,5 +84,23 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function destroyService($id)
+    {
+        $service = Service::find($id);
+        $service->delete();
+
+        return redirect('/admin/servicios');
+    }
+
+    public function destroyUser($id)
+    {
+        $service = Service::where('user_id', 'LIKE', $id);
+        $service->delete();
+
+        $user = User::find($id);
+        $user->delete();
+
+        return redirect('/admin/usuarios');
     }
 }

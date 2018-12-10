@@ -3,21 +3,30 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-sm">
-            <div class="list-categories">
-                <div class="list-group">
-                    <?php foreach($services as $service): ?>
-    
-                        <div class="list-group-item list-group-item-action flex-column align-items-start">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">{{ $service->name}}</h5>
-                            </div>
-                        </div>
-                    <?php endforeach ?>
-                    {!! $services->links() !!}
-                </div>
-            </div>
-        </div>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Servicio</th>
+      <th scope="col">Publicado por</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach ($services as $service)
+    <tr>
+      <th scope="row">{{$service->id}}</th>
+      <td>{{$service->name}}</td>
+      <td>{{$service->user['name']}}</td>
+      <td><form action="servicio/{{ $service->id }}" method="post" value="DELETE">
+        {{ method_field('DELETE') }}
+        {{ csrf_field() }}
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        </form></td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
     </div>
 </div>
 @endsection
