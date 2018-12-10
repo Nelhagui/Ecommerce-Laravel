@@ -15,7 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::paginate(5);
-        return view('admin.categories')->with('categories', $categories);
+        return view('admin.categorias')->with('categories', $categories);
 
     }
 
@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -48,7 +48,8 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $category = Category::find($id);
+        return view ('admin.category.edit')->with('category', $category);
     }
 
     /**
@@ -69,9 +70,16 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, $id)
     {
-        //
+        $categories = Category::all();
+        $category = Category::find($id);
+        $category->name = $request->input('name');
+        $category->description = $request->input('description');
+
+        $category->update();
+        return view('admin.categorias')->with("categories", $categories);
     }
 
     /**

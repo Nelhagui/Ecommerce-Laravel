@@ -24,12 +24,14 @@ Route::get('/', 'HomeController@index');
 
 // ADMIN
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'checkrole']], function() {
-    Route::get('/home', 'AdminController@index')->name('dashboard-home');
-    Route::get('/usuarios', 'UserController@index')->name('admin-users-list');
-    Route::get('/categorias', 'CategoryController@index')->name('admin-categories-list');
-    Route::get('/servicios', 'ServiceController@adminIndex')->name('admin-services-list');
-    Route::delete('/servicio/{id}', 'AdminController@destroyService')->name('adminservice-destroy');
-    Route::delete('/usuario/{id}', 'AdminController@destroyUser')->name('adminuser-destroy');
+Route::get('/home', 'AdminController@index')->name('dashboard-home');
+Route::get('/usuarios', 'UserController@index')->name('admin-users-list');
+Route::get('/categorias', 'CategoryController@index')->name('admin-categories-list');
+Route::get('/servicios', 'ServiceController@adminIndex')->name('admin-services-list');
+Route::delete('/servicio/{id}', 'AdminController@destroyService')->name('adminservice-destroy');
+Route::delete('/usuario/{id}', 'AdminController@destroyUser')->name('adminuser-destroy');
+Route::get('/categorias/{id}/edit', 'CategoryController@show');
+Route::patch('/categorias/{id}/edit', 'CategoryController@update')->name('updateCategory');
 
 });
 
