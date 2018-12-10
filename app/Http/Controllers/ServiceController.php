@@ -168,4 +168,9 @@ class ServiceController extends Controller
 
         return redirect('/servicios');
     }
+
+    public function adminIndex() {
+        $services = Service::all();
+        return view('admin.services')->with('services', $services);
+    }
 }

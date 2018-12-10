@@ -16,8 +16,8 @@
                     <h1 class="jumbotron-heading"><?="Bienvenido!" ?></h1>
                     <p class="lead text-muted">Tu perfil es el de "Administrador" y estás autorizado a modificar los siguientes parámetros:</p>
                     <p>
-                    <a href="" class="btn btn-primary my-2">Usuarios</a>
-                    <a href="" class="btn btn-primary my-2">Servicios Activos</a>
+                    <a href="/admin/usuarios" class="btn btn-primary my-2">Usuarios</a>
+                    <a href="/admin/servicios" class="btn btn-primary my-2">Servicios Activos</a>
                     <a href="{{route ('admin-categories-list')}}" class="btn btn-primary my-2">Categorías</a>
                     </p>
 
