@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Service;
 use App\User;
 use App\Category;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -17,7 +18,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $user = Auth::user();
+        $services = $user->services;
+        return view('admin.services')->with('services', $services);
     }
 
     /**
