@@ -14,8 +14,8 @@ class TableUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('provincia', 50);
-            $table->string('municipio', 50);
+            $table->string('provincia', 50)->nullable();
+            $table->string('municipio', 50)->nullable();
         });
     }
 
