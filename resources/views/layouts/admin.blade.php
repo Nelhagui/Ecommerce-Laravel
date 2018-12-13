@@ -90,6 +90,17 @@
       </div>
     </div>
 
+    <script>
+    var botoneseliminar = document.getElementsByClassName('btn btn-danger')
+    console.log(botoneseliminar)
+    for (let i = 0; i < botoneseliminar.length; i++) {
+    botoneseliminar[i].onclick = function (evento) {
+        if (confirm("Seguro quieres borrar estos datos?") == false) {
+          evento.preventDefault()
+        }
+      }
+    }
+    </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
