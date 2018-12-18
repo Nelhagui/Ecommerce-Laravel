@@ -50,7 +50,11 @@
             </h6>
             <ul class="nav flex-column mb-2">
                 <li class="nav-item">
+<<<<<<< HEAD
                     <a class="nav-link" href="/admin/usuarios">
+=======
+                    <a class="nav-link" href="admin/usuarios">
+>>>>>>> 2ff8a87dd853d44d874810b5ca1a9100b4c50c20
                         <span data-feather="users"></span>
                         Usuarios
                     </a>
