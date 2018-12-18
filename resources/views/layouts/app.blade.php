@@ -11,7 +11,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="/js/validaciones.js"></script>
+    <script src="js/validaciones.js" ></script>
+    <script src="js/master.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="/js/animaciones.js"></script>
 
     <!-- Fonts -->

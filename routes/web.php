@@ -36,15 +36,19 @@ Route::patch('/categorias/{id}/edit', 'CategoryController@update')->name('update
 });
 
 // SERVICE 
-Route::get('/servicio/todos', 'ServiceController@allservices')->name('all-services');
-Route::get('/servicios', 'ServiceController@index')->name('services-list');
-Route::get('/servicio/{id}/edit', 'ServiceController@edit')->name('service-edit');
-Route::delete('servicio/{id}', 'ServiceController@destroy')->name('service-destroy');
-Route::get('/servicio/agregar', 'ServiceController@create')->name('service-add')->middleware('auth');
-Route::post('/servicio/agregar','ServiceController@store')->name('service-store')->middleware('auth');
-Route::patch('/servicio/{id}/edit', 'ServiceController@update')->name('service-update');
-Route::get('/servicio/detalle/{id}', 'ServiceController@show')->name('detailservice');
-Route::get('/servicio/categoria/{id}', 'ServiceController@indexCategories')->name('service-indexcategories');
+Route::get('servicio/todos', 'ServiceController@allservices')->name('all-services');
+Route::get('servicio/servicios', 'ServiceController@index')->name('services-list');
+Route::get('servicio/categoria/{id}', 'ServiceController@indexCategories')->name('service-indexcategories');
+Route::get('servicio/detalle/{id}', 'ServiceController@show')->name('detailservice');
+
+Route::group(['prefix' => 'servicio', 'middleware' => ['auth']], function() {
+    Route::get('/{id}/edit', 'ServiceController@edit')->name('service-edit');
+    Route::delete('/{id}', 'ServiceController@destroy')->name('service-destroy');
+    Route::get('/agregar', 'ServiceController@create')->name('service-add')->middleware('auth');
+    Route::post('/agregar','ServiceController@store')->name('service-store')->middleware('auth');
+    Route::patch('/{id}/edit', 'ServiceController@update')->name('service-update');
+
+});
 
 
 // USER

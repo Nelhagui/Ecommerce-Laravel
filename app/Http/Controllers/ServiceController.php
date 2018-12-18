@@ -149,7 +149,7 @@ class ServiceController extends Controller
         $service->category_id = $request->input('category');
 
         $service->update();
-        return redirect("/servicios");
+        return redirect("servicio/servicios");
     }
 
     public  function search ()
@@ -181,6 +181,7 @@ class ServiceController extends Controller
     public function indexCategories($id) {
         $categories = Category::all();
         $services = Service::where('category_id', 'LIKE', '%' .$id)->get();
+        
         return view('services.indexcategories')
         ->with('services', $services)
         ->with('categories', $categories);

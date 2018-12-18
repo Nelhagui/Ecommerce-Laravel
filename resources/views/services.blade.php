@@ -17,7 +17,7 @@
                             {{ method_field('DELETE') }}
                             {{ csrf_field() }}
                             
-                            <a href="servicio/{{ $service->id }}/edit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Editar</a>
+                            <a href="/servicio/{{ $service->id }}/edit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Editar</a>
 
                             <button type="submit" class="btn btn-danger">Eliminar</button>
 

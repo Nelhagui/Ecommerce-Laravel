@@ -71,3 +71,12 @@ input.input-text {
     margin: 5px 0px;
     padding: 10px;
 }
+
+
+/* DETALLE SERVICIOS---------------------------------------------------- */
+.featurette-image.img-fluid.mx-auto {
+    border-radius: 9px;
+}
+.card-img-right.flex-auto.d-none.d-lg-block {
+    border-radius: 8px;
+}

@@ -43,11 +43,11 @@
                 <p>Regístrese de forma gratuita, configure su Gig y ofrezca su trabajo a nuestra audiencia global.</p>
               </div>
               <div class="col-sm-4 col-xs-12">
-                <h2>2. Demostrá tu talento</h2>
+                <h2>2. Demostrar tu talento</h2>
                 <p>Regístrese de forma gratuita, configure su Gig y ofrezca su trabajo a nuestra audiencia global.</p>
               </div>
               <div class="col-sm-4 col-xs-12">
-                <h2>3. Nuevo cliente</h2>
+                <h2>3. Ganar un cliente</h2>
                 <p>Regístrese de forma gratuita, configure su Gig y ofrezca su trabajo a nuestra audiencia global.</p>
               </div>
             </div>
