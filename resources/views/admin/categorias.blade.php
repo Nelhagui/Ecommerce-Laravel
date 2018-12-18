@@ -17,8 +17,6 @@
       <th scope="row">{{$category->id}}</th>
       <td>{{$category->name}}</td>
       <td><form action="/admin/categorias/{{ $category->id }}/edit" method="GET">
-        {{-- {{ method_field('PATCH') }} --}}
-        {{-- {{ csrf_field() }} --}}
         <button type="submit" class="btn btn-dark">Editar</button>
         </form></td>
     </tr>
