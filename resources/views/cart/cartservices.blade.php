@@ -22,7 +22,7 @@
                             <tr>
                                 <td class="col-sm-8 col-md-6">
                                     <div class="media">
-                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="{{ Storage::url($product->imagedescription)}}" style="width: 72px; height: 72px;"> </a>
+                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="{{ $product->imagedescription }}" style="width: 72px; height: 72px;"> </a>
                                         <div class="media-body">
                                         <h4 class="media-heading"><a href="#">{{$product->name}}</a></h4>
                                             <span>Usuario: </span><span class="text-success"><strong>{{$product->user['name']}}</strong></span>

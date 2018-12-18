@@ -22,7 +22,7 @@ class CartController extends Controller
             // $service->stock = $session_services[$key]['stock'];
             $services[] = $service; 
         }
-        // dd($services);
+                // dd($services);
         return view('cart.cartservices')->with('services', $services);
     }
 
