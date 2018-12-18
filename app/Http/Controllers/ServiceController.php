@@ -41,7 +41,7 @@ class ServiceController extends Controller
     		'id' => $request->id,
     	]);
         // dd(session('cart.service'));
-    	return redirect()->back();
+    	return redirect('/carrito');
     }
 
 
