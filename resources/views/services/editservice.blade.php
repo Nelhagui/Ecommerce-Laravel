@@ -12,7 +12,7 @@
         </div>
         @endif
 
-        <form class="" action="/servicio/{{ $service->id }}/edit" method="POST" enctype="multipart/form-data">
+        <form class="" action="/servicio/{{ $service->id }}/edit" method="patch" enctype="multipart/form-data">
         {{ method_field('PATCH') }}
         {{ csrf_field() }}
             <div class="form-group">
