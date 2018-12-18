@@ -12,13 +12,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="first-slide" src="images/banner-home.jpg" alt="First slide">
+              <img width='100%' class="first-slide" src="images/banner-home.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="second-slide" src="images/banner-home.jpg" alt="Second slide">
+              <img width='100%' class="second-slide" src="images/banner-home.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="third-slide" src="images/banner-home.jpg" alt="Third slide">
+              <img width='100%' class="third-slide" src="images/banner-home.jpg" alt="Third slide">
               <div class="container">
               </div>
             </div>
