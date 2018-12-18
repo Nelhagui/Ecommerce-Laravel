@@ -79,7 +79,7 @@ class CategoryController extends Controller
         $category->description = $request->input('description');
 
         $category->update();
-        return view('admin.categorias')->with("categories", $categories);
+        return redirect('/admin/categorias');
     }
 
     /**
