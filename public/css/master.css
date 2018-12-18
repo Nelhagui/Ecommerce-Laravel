@@ -80,3 +80,11 @@ input.input-text {
 .card-img-right.flex-auto.d-none.d-lg-block {
     border-radius: 8px;
 }
+
+/* BUSQUEDA ------------------------------------------------------------ */
+
+@media (max-width: 600px) {
+    li.nav-busqueda {
+      display: none;
+    }
+  }
