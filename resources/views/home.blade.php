@@ -65,7 +65,7 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-12">
-                  <a href="/servicio/categoria/13">
+                  <a href="/servicio/categoria/2">
                     <h3>Gastronomía</h3>
                     <p>Lorem ipsum dolor sit amet</p>
                       <img id="imagencategoria" width="100%" src="images/categories/gastronomia.jpg" alt="">
