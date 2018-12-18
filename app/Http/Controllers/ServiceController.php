@@ -170,7 +170,7 @@ class ServiceController extends Controller
         $service = Service::find($id);
         $service->delete();
 
-        return redirect('/servicios');
+        return redirect()->back();
     }
 
     public function adminIndex() {
