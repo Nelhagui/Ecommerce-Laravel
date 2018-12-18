@@ -21,7 +21,7 @@
       <td><form action="categorias/{{ $category->id }}/edit" method="GET">
         {{-- {{ method_field('PATCH') }} --}}
         {{-- {{ csrf_field() }} --}}
-        <button type="submit" class="btn btn-danger">Editar</button>
+        <button type="submit" class="btn btn-dark">Editar</button>
         </form></td>
     </tr>
     @endforeach
