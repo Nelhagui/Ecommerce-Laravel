@@ -39,8 +39,7 @@
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link active" href="#">
-                  <span data-feather="home"></span>
-                  Administrar <span class="sr-only">(current)</span>
+                  <span class="sr-only">(current)</span>
                 </a>
               </li>
 
